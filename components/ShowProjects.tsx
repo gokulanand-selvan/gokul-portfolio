@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 
 type ShowProjectsProps = {
-  flip: boolean;
   title: string;
   technologies: string;
   imageUrl: string;
@@ -14,7 +13,6 @@ type ShowProjectsProps = {
 };
 
 const ShowProjects: React.FC<ShowProjectsProps> = ({
-  flip,
   title,
   technologies,
   imageUrl,

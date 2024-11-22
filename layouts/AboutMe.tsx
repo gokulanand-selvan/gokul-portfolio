@@ -41,6 +41,7 @@ export default function AboutMe({
         {/* Image */}
         <Image
           alt="gokul"
+          priority
           src={imageHover ? logo : gokulImg}
           className={` cursor-pointer rounded-full object-cover object-center h-60 w-60 bg-[#c4bfb9] transition-transform duration-500 ease-in-out  ${
             imageHover

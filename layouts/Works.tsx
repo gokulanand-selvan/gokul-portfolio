@@ -15,7 +15,6 @@ export default function Works(props: { scrollRef: any }) {
           about={project.about}
           liveLink={project.liveLink}
           githubLink={project.githubLink}
-          flip={project.id % 2 === 0}
           isEven={index}
         />
       ))}

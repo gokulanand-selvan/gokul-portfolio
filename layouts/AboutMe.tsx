@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import gokulImg from "../assets/images/gokul.png";
+import gokulImg from "../assets/images/gokulHome.png";
 import logo from "../assets/images/b.png";
 import { FaCode } from "react-icons/fa";
 import { MyStackList } from "@/utils/Skills";
@@ -19,7 +19,7 @@ export default function AboutMe({
   };
 
   return (
-    <section className="px-10 py-10 flex flex-col items-center gap-8 text-white bg-black">
+    <section className="px-10 py-8 flex flex-col items-center gap-8 text-white bg-black">
       <div
         onMouseEnter={() => setImageHover(true)}
         onMouseLeave={() => setImageHover(false)}
@@ -60,7 +60,7 @@ export default function AboutMe({
       </div>
       <SocialLinks />
       <h4 className="py-4 text-start text-xl text-white font-normal flex items-center gap-1">
-        Frontend Developer <FaCode fontSize={20} />
+        Software Developer <FaCode fontSize={20} />
       </h4>
       <div>
         <div className="flex flex-row gap-2 py-2 flex-wrap justify-center items-center">
@@ -82,7 +82,7 @@ export default function AboutMe({
           onClick={() => triggerScroll()}
           className="text-white font-semibold text-ellipsis truncate"
         >
-          View my work 👇
+          View my works 👇
         </button>
       </div>
     </section>

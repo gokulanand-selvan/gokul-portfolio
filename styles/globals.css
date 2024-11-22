@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 .pinkGradient {
-  color: rgb(238, 0, 159);
+  color: #ee009f;
   color: linear-gradient(
     135deg,
     rgba(238, 0, 159, 1) 35%,

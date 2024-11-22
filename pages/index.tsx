@@ -1,6 +1,8 @@
+import Footer from "@/layouts/Footer";
 import AboutMe from "@/layouts/AboutMe";
 import Works from "@/layouts/Works";
 import React, { useRef } from "react";
+import PokemonBored from "@/layouts/PokemonBored";
 
 export default function index() {
   const scrollRef = useRef<null | HTMLDivElement>(null);
@@ -14,6 +16,8 @@ export default function index() {
     <main className="bg-black">
       <AboutMe triggerScroll={triggerScroll} />
       <Works scrollRef={scrollRef} />
+      <PokemonBored />
+      <Footer />
     </main>
   );
 }

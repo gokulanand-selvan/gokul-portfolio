@@ -7,25 +7,25 @@ const SocialLinks = () => {
   const links = [
     {
       id: 1,
-      icon: <FaLinkedinIn fontSize={35} />,
+      icon: <FaLinkedinIn fontSize={25} />,
       bgColor: "#027fb1",
       href: "https://www.linkedin.com/in/gokulanandselvan",
     },
     {
       id: 2,
-      icon: <AiOutlineGithub fontSize={35} color="black" />,
+      icon: <AiOutlineGithub fontSize={25} color="black" />,
       bgColor: "white",
       href: "https://github.com/gokulanand-selvan",
     },
     {
       id: 3,
-      icon: <FaInstagram fontSize={35} />,
+      icon: <FaInstagram fontSize={25} />,
       bgColor: "#e94475",
       href: "https://www.instagram.com/gokulanand_03/",
     },
     {
       id: 4,
-      icon: <IoMailOutline fontSize={35} color="black" />,
+      icon: <IoMailOutline fontSize={25} color="black" />,
       bgColor: "white",
       href: "mailto:gokul2848@gmail.com",
     },

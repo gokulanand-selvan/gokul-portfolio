@@ -39,13 +39,14 @@ const ShowProjects: React.FC<ShowProjectsProps> = ({
     >
       <div className="max-w-7xl w-full flex flex-col md:flex-col items-center gap-8">
         <div className="flex-1 shadow-lg rounded-md overflow-hidden">
-          <Image
+          {/* <Image
             src={imageUrl}
             alt={title}
             width={650}
             height={350}
             className="rounded-md"
-          />
+          /> */}
+          <img src={imageUrl} alt={title} width={650} height={350} />
         </div>
         <div className="flex-1 flex flex-col items-center text-center gap-4 px-4">
           <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>

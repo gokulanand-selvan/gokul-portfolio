@@ -64,11 +64,11 @@ export default function AboutMe({
         Software Developer <FaCode fontSize={20} />
       </h4>
       <div>
-        <div className="flex flex-row gap-2 py-2 flex-wrap justify-center items-center">
+        <div className="flex flex-row gap-4 py-2 flex-wrap justify-center items-center">
           {MyStackList.map((item, ind) => (
             <p
               key={ind}
-              className="rounded-full px-2 py-1 flex justify-center items-center text-white font-semibold hover:scale-125 transition-all ease-in-out cursor-default"
+              className="rounded-full px-2 py-1  flex justify-center items-center text-white font-semibold hover:scale-125 transition-all ease-in-out cursor-default"
               style={{
                 background: getBackground(item.length),
               }}

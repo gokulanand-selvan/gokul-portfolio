@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["ibb.co", "i.ibb.co"]
+    domains: ['i.ibb.co']
   }
 };
 

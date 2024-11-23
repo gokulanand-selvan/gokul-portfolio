@@ -61,7 +61,8 @@ export default function AboutMe({
       </div>
       <SocialLinks />
       <h4 className="py-4 text-start text-xl text-white font-normal flex items-center gap-1">
-        Software Developer <FaCode fontSize={20} />
+        <span className="font-semibold">Software Developer</span>{" "}
+        <FaCode fontSize={20} />
       </h4>
       <div>
         <div className="flex flex-row gap-4 py-2 flex-wrap justify-center items-center">

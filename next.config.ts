@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ['i.ibb.co']
+    domains: ['i.ibb.co'],
+    unoptimized: true
   }
 };
 

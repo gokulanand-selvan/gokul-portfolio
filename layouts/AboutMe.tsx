@@ -84,7 +84,7 @@ export default function AboutMe({
           onClick={() => triggerScroll()}
           className="text-white font-semibold text-ellipsis truncate"
         >
-          View my works 👇
+          Take a look at my works
         </button>
       </div>
     </section>

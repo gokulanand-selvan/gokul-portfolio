@@ -1,5 +1,5 @@
 import { backgrounds } from "@/styles/backgrounds";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 type ShowProjectsProps = {

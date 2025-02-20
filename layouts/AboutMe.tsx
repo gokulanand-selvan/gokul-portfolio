@@ -121,7 +121,14 @@ export default function AboutMe({
           description="Collaborated with a team of three developers to build an advanced data visualization app, enabling geospatial and temporal data management. Developed a React Canvas Playground as a micro-frontend within an Angular app, enhancing interactive mapping and data visualization."
         />
       </div>
-
+      <p className="text-lg font-medium">
+        With two years at this company, I have gained experience in frontend
+        development and taking ownership of key project components. I have
+        collaborated closely with teams to build scalable and interactive
+        applications that enhance data visualization and digital transformation.
+        Additionally, I have contributed to the hiring process, assisting in
+        interviews to onboard talented developers for new projects.
+      </p>
       {/* Call to Action */}
       <button
         onClick={() => triggerScroll()}

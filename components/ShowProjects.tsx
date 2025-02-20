@@ -1,6 +1,8 @@
 import { backgrounds } from "@/styles/backgrounds";
 import Image from "next/image";
 import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa6";
 
 type ShowProjectsProps = {
   title: string;
@@ -23,7 +25,7 @@ const ShowProjects: React.FC<ShowProjectsProps> = ({
 }) => {
   // Open a link in a new tab
   const openLink = (link: string) => {
-    console.log(link);
+    // console.log(link);
     window.open(link, "_blank");
   };
   const getBackground = (index: number) => {
@@ -46,6 +48,7 @@ const ShowProjects: React.FC<ShowProjectsProps> = ({
             height={350}
             className="rounded-md"
           />
+
           {/* <img src={imageUrl} alt={title} width={650} height={350} /> */}
         </div>
         <div className="flex-1 flex flex-col items-center text-center gap-4 px-4">
@@ -57,15 +60,15 @@ const ShowProjects: React.FC<ShowProjectsProps> = ({
           <div className="mt-6 flex gap-4">
             <button
               onClick={() => openLink(liveLink)}
-              className="px-6 py-3 rounded-full text-white border-white border-2 font-semibold hover:bg-[#8020f7] hover:border-[#8020f7] hover:text-white transition"
+              className="px-6 py-3 flex items-center gap-2 rounded-full text-white border-white border-2 font-semibold hover:bg-[#8020f7] hover:border-[#8020f7] hover:text-white transition"
             >
-              View Site
+              View Site <FaLink size={23} />
             </button>
             <button
               onClick={() => openLink(githubLink)}
-              className="px-6 py-3 rounded-full bg-white border-2 border-gray-300 text-black font-semibold hover:bg-[#8020f7] hover:border-[#8020f7] hover:text-white transition"
+              className="px-6 py-3 flex items-center gap-2 rounded-full bg-white border-2 border-gray-300 text-black font-semibold hover:bg-[#8020f7] hover:border-[#8020f7] hover:text-white transition"
             >
-              GitHub
+              GitHub <FaGithub size={23} />
             </button>
           </div>
         </div>

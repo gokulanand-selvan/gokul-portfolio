@@ -17,29 +17,39 @@ const PokemonBored: React.FC = () => {
   }, []);
 
   const fetchPokemon = async () => {
-    setPokemon(null); // Reset the state
+    setPokemon(null);
+    const randomId = Math.floor(Math.random() * 1010) + 1;
+
+    // Check if Pokémon is already in session storage
+    const cachedPokemon = sessionStorage.getItem(`pokemon-${randomId}`);
+    if (cachedPokemon) {
+      setPokemon(JSON.parse(cachedPokemon));
+      return;
+    }
+
     try {
-      const randomId = Math.floor(Math.random() * 1010) + 1; // Random Pokémon ID
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${randomId}`
       );
       const data = await response.json();
 
-      let characteristic = "No characteristic available";
-      // Add Pokémon cry URL (the cries follow a consistent naming convention)
       const cryUrl = `https://play.pokemonshowdown.com/audio/cries/${data.name.toLowerCase()}.mp3`;
 
-      // Set Pokémon data, including the cry URL
-      setPokemon({
+      const newPokemon = {
         name: data.name,
         image: data.sprites?.other["official-artwork"]?.front_default || "",
-        types: data.types.map((typeInfo: any) => typeInfo.type.name), // Extract types
-        characteristic,
+        types: data.types.map((typeInfo: any) => typeInfo.type.name),
+        characteristic: "No characteristic available",
         sound: cryUrl,
-      });
+      };
+
+      // Store in session storage
+      sessionStorage.setItem(`pokemon-${randomId}`, JSON.stringify(newPokemon));
+
+      setPokemon(newPokemon);
     } catch (error) {
       console.error("Failed to fetch Pokémon data:", error);
-      setPokemon(null); // Reset state in case of error
+      setPokemon(null);
     }
   };
 
@@ -48,11 +58,13 @@ const PokemonBored: React.FC = () => {
       <div className="py-4 flex flex-col items-center">
         {pokemon && (
           <div className="border-2 md:w-fit p-4 rounded-lg">
-            <img
-              src={pokemon.image}
-              alt={pokemon.name}
-              className="mx-auto bg-white w-64 object-contain h-64 shadow-md"
-            />
+            <div className="min-h-64 min-w-64 ">
+              <img
+                src={pokemon.image}
+                alt={pokemon.name}
+                className="mx-auto bg-white w-64 object-contain h-64 shadow-md"
+              />
+            </div>
             <h1 className="text-2xl text-center font-bold capitalize mt-4">
               {pokemon.name}
             </h1>
@@ -76,10 +88,15 @@ const PokemonBored: React.FC = () => {
             </p> */}
           </div>
         )}
-        {!pokemon && <p className="text-xl text-center">Loading Pokémon...</p>}
+        {!pokemon && (
+          <div className="min-h-72 flex justify-center items-center border-emerald-100 min-w-64 ">
+            <p className="text-xl text-center">Loading Pokémon...</p>
+          </div>
+        )}
       </div>
       <div className="py-4 flex flex-col items-center gap-10 font-semibold text-xl text-center">
-        Do you like to know about Pokémon?
+        "A fun way to showcase dynamic data fetching—who's your surprise Pokémon
+        today?"
         <button
           onClick={fetchPokemon}
           className="ml-2 bg-blue-500 px-4 py-2 rounded"

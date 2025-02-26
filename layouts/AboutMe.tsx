@@ -61,7 +61,11 @@ export default function AboutMe({
       </div>
 
       {/* Name */}
-      <h2 className="text-3xl md:text-8xl sm:text-2xl font-extrabold text-white">
+      <h2
+        onMouseEnter={() => setImageHover(true)}
+        onMouseLeave={() => setImageHover(false)}
+        className="text-3xl md:text-8xl sm:text-2xl font-extrabold text-white cursor-pointer "
+      >
         I&apos;m&nbsp;
         <span className="purplePinkGradient">Gokul Anand</span>
       </h2>

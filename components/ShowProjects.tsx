@@ -23,7 +23,6 @@ const ShowProjects: React.FC<ShowProjectsProps> = ({
   githubLink,
   isEven,
 }) => {
-  // Open a link in a new tab
   const openLink = (link: string) => {
     // console.log(link);
     window.open(link, "_blank");

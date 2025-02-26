@@ -43,7 +43,7 @@ const ShowProjects: React.FC<ShowProjectsProps> = ({
           <Image
             src={imageUrl}
             alt={title}
-            width={650}
+            width={950}
             height={350}
             className="rounded-md"
           />

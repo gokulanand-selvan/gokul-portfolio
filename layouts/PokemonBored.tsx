@@ -101,7 +101,7 @@ const PokemonBored: React.FC = () => {
           onClick={fetchPokemon}
           className="ml-2 bg-blue-500 px-4 py-2 rounded"
         >
-          Surprise me
+          Switch Pokemon
         </button>
       </div>
     </section>

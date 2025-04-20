@@ -6,7 +6,6 @@ import { FaCode } from "react-icons/fa";
 import { MyStackList } from "@/utils/Skills";
 import { backgrounds } from "@/styles/backgrounds";
 import SocialLinks from "@/components/SocialLinks";
-import { FaUpwork } from "react-icons/fa6";
 import { GoOrganization } from "react-icons/go";
 
 const ExperienceItem = ({
@@ -114,29 +113,28 @@ export default function AboutMe({
           The projects I worked on were data-driven solutions. Some of the major
           projects that I contributed to are:
         </p>
-
         <ExperienceItem
           title="Vehicle Evaluation Mobile Application for Refurbished Automotive Providers"
           description="Developed a hybrid (offline + online) vehicle evaluation app to streamline assessments with video and audio recording, and real-time synchronization. Took full responsibility for the frontend using React Native, integrating secure authentication, media handling, and dynamic form validations."
         />
-
         <ExperienceItem
           title="GIS & Temporal Data Visualization Web Application for a Data Exchange Entity"
-          description="Collaborated with a team of three developers to build an advanced data visualization app, enabling geospatial and temporal data management. Developed a React Canvas Playground as a micro-frontend within an Angular app, enhancing interactive mapping and data visualization."
+          description="Working under the direct mentorship of the CEO on refining both technical and product-oriented decision-making skills. Directly interacting with clients to gather requirements, present progress, and incorporate feedback into the development process.Collaborating and mentoring with two interns, handling project planning, code quality, and feature implementation to build an advanced data visualization app, enabling geospatial and temporal data management"
         />
       </div>
       <p className="text-lg font-medium">
-        With two years at this company, I have gained experience in frontend
-        development and taking ownership of key project components. I have
-        collaborated closely with teams to build scalable and interactive
+        With over two years at this company, I have gained experience in
+        frontend development and taking ownership of key project components. I
+        have collaborated closely with teams to build scalable and interactive
         applications that enhance data visualization and digital transformation.
         Additionally, I have contributed to the hiring process, assisting in
         interviews to onboard talented developers for new projects.
       </p>
       {/* Call to Action */}
+
       <button
         onClick={() => triggerScroll()}
-        className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg cursor-pointer hover:bg-blue-700 transition-all animate-bounce hover:animate-none"
+        className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg cursor-pointer hover:bg-black hover:border-white hover:border transition-all animate-pulse hover:animate-none"
       >
         Take a look at my works
       </button>

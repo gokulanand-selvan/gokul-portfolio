@@ -47,7 +47,7 @@ const projectsList = [
         imageUrl: "https://i.ibb.co/M776VC7/Screenshot-2024-11-22-at-7-16-26-PM.png",
         about:
             "Built with ReactJS using typescript, this is a simple emplyoee CRUD application.",
-        liveLink: "https://i.ibb.co/M776VC7/Screenshot-2024-11-22-at-7-16-26-PM.png",
+        liveLink: "https://main--snazzy-kelpie-a6ac3b.netlify.app/",
         githubLink: "https://github.com/gokulanand-selvan/basic_crud_app",
     },
     {

@@ -55,6 +55,17 @@ const PokemonBored: React.FC = () => {
 
   return (
     <section className="bg-black text-white min-h-[380px] px-28 flex items-center justify-evenly flex-col md:flex-row ">
+      
+      <div className="py-4 flex flex-col items-center gap-10 font-semibold text-xl text-center">
+        "A fun way to showcase dynamic data fetching. Who's your Pokémon
+        today?"
+        <button
+          onClick={fetchPokemon}
+          className="ml-2 bg-blue-500 px-4 py-2 rounded"
+        >
+          Switch Pokemon
+        </button>
+      </div>
       <div className="py-4 flex flex-col items-center">
         {pokemon && (
           <div className="border-2 md:w-fit p-4 rounded-lg">
@@ -93,16 +104,6 @@ const PokemonBored: React.FC = () => {
             <p className="text-xl text-center">Loading Pokémon...</p>
           </div>
         )}
-      </div>
-      <div className="py-4 flex flex-col items-center gap-10 font-semibold text-xl text-center">
-        "A fun way to showcase dynamic data fetching—who's your surprise Pokémon
-        today?"
-        <button
-          onClick={fetchPokemon}
-          className="ml-2 bg-blue-500 px-4 py-2 rounded"
-        >
-          Switch Pokemon
-        </button>
       </div>
     </section>
   );
